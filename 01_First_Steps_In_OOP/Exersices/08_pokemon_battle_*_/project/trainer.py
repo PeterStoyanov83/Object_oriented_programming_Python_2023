@@ -1,5 +1,5 @@
 from typing import List
-from pokemon import Pokemon
+from project.pokemon import Pokemon
 
 
 class Trainer:
@@ -34,8 +34,8 @@ class Trainer:
         pokemons_data = '\n'.join([f"- {p.pokemon_details()}" for p in self.pokemons])
 
         return f"Pokemon Trainer {self.name}\n" + \
-               f"Pokemon count {len(self.pokemons)}\n" + \
-               f"{pokemons_data}"
+            f"Pokemon count {len(self.pokemons)}\n" + \
+            f"{pokemons_data}"
 
 
 pokemon = Pokemon("Pikachu", 90)
