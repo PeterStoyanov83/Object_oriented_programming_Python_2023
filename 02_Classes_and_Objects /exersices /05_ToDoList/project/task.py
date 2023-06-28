@@ -25,6 +25,7 @@ class Task:
     def edit_comment(self, comment_number: int, new_comment: str):
         if 0 <= comment_number < len(self.comments):
             self.comments[comment_number] = new_comment
+            return ', '.join(self.comments)
         else:
             return "Cannot find comment."
 

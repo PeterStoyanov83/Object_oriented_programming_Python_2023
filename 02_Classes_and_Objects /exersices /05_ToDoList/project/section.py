@@ -10,9 +10,9 @@ class Section:
     def add_task(self, new_task: 'Task') -> str:
         if new_task in self.tasks:
             return f"Task is already in the section {self.name}"
-        else:
-            self.tasks.append(new_task)
-            return f"Task {new_task.details()} is added to the section"
+
+        self.tasks.append(new_task)
+        return f"Task {new_task.details()} is added to the section"
 
     def complete_task(self, task_name: str) -> str:
         for task in self.tasks:
@@ -32,16 +32,16 @@ class Section:
             section_info += f"\n{task.details()}"
         return section_info
 
-#
-# task = Task("Make bed", "27/05/2020")
-# print(task.change_name("Go to University"))
-# print(task.change_due_date("28.05.2020"))
-# task.add_comment("Don't forget laptop")
-# print(task.edit_comment(0, "Don't forget laptop and notebook"))
-# print(task.details())
-# section = Section("Daily tasks")
-# print(section.add_task(task))
-# second_task = Task("Make bed", "27/05/2020")
-# section.add_task(second_task)
-# print(section.clean_section())
-# print(section.view_section())
+
+task = Task("Make bed", "27/05/2020")
+print(task.change_name("Go to University"))
+print(task.change_due_date("28.05.2020"))
+task.add_comment("Don't forget laptop")
+print(task.edit_comment(0, "Don't forget laptop and notebook"))
+print(task.details())
+section = Section("Daily tasks")
+print(section.add_task(task))
+second_task = Task("Make bed", "27/05/2020")
+section.add_task(second_task)
+print(section.clean_section())
+print(section.view_section())
