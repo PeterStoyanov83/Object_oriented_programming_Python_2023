@@ -15,6 +15,14 @@ class Employee(Person):
         self.sec_number = sec_number
 
 
+class Unemployed(Person):
+    pass
+
+
+class Student(Person):
+    pass
+
+
 class Teacher:
     def __init__(self, name, sec_number, children):
         self.name = name
