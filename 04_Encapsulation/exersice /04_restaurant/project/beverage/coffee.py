@@ -1,4 +1,4 @@
-from hot_beverage import HotBeverage
+from project.beverage.hot_beverage import HotBeverage
 
 
 class Coffee(HotBeverage):
