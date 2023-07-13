@@ -6,5 +6,6 @@ class Dessert(Food):
         super().__init__(name, price, grams)
         self.__calories = calories
 
-    def get_calories(self):
+    @property
+    def calories(self):
         return self.__calories

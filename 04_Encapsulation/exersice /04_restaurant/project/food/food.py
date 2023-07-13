@@ -6,5 +6,6 @@ class Food(Product):
         super().__init__(name, price)
         self.__grams = grams
 
-    def get_grams(self):
+    @property
+    def grams(self):
         return self.__grams
