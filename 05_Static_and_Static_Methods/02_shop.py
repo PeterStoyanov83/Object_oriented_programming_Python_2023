@@ -15,7 +15,7 @@ class Shop:
         return cls(name, type, 10)
 
     def add_item(self, item_name: str) -> str:
-        if self.capacity > len(self.items):
+        if self.capacity > len(self.items.values()):
             if item_name not in self.items:
                 self.items[item_name] = 0
             self.items[item_name] += 1
@@ -35,19 +35,32 @@ class Shop:
             del self.items[item_name]
             return f"{amount} {item_name} removed from the shop"
 
-        return f"{amount} {item_name} removed from the shop"
-
     def __repr__(self):
         return f"{self.name} of type {self.type} with capacity {self.capacity}"
 
 
-fresh_shop = Shop("Fresh Shop", "Fruit and Veg", 50)
-small_shop = Shop.small_shop("Fashion Boutique", "Clothes")
-print(fresh_shop)
-print(small_shop)
-print(fresh_shop.add_item("Bananas"))
-print(fresh_shop.remove_item("Tomatoes", 2))
-print(small_shop.add_item("Jeans"))
-print(small_shop.add_item("Jeans"))
-print(small_shop.remove_item("Jeans", 2))
-print(small_shop.items)
+def test_shop():
+    # Create a small shop using the class method
+    small_shop = Shop.small_shop("Small Shop", "Grocery")
+
+    # Test adding items to the shop
+    assert small_shop.add_item("Apple") == "Apple added to the shop"
+    assert small_shop.add_item("Banana") == "Banana added to the shop"
+    assert small_shop.add_item("Apple") == "Apple added to the shop"
+    assert small_shop.add_item("Orange") == "Orange added to the shop"
+
+    # Attempt to add an item beyond the shop's capacity
+    assert small_shop.add_item("Grapes") == "Not enough capacity in the shop"
+
+    # Test removing items from the shop
+    assert small_shop.remove_item("Apple", 2) == "2 Apple removed from the shop"
+    assert small_shop.remove_item("Banana", 1) == "1 Banana removed from the shop"
+    assert small_shop.remove_item("Grapes", 1) == "Cannot remove 1 Grapes"
+
+    # Test shop representation
+    assert repr(small_shop) == "Small Shop of type Grocery with capacity 10"
+
+    print("All test cases pass")
+
+
+test_shop()
