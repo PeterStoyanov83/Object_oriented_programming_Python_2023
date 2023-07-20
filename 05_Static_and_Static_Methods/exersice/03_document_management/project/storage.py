@@ -16,21 +16,20 @@ class Storage:
         if document not in self.documents:
             self.documents.append(document)
 
-    def edit_category(self, category_id: int, new_name: str):
+    def edit_category(self, category_id: int, new_name:str):
         category = next((c for c in self.categories if c.id == category_id), None)
         if category:
-            category.name = new_name
+            category.edit(new_name)
 
     def edit_topic(self, topic_id: int, new_topic: str, new_storage_folder: str):
         topic = next((t for t in self.topics if t.id == topic_id), None)
         if topic:
-            topic.topic = new_topic
-            topic.storage_folder = new_storage_folder
+            topic.edit(new_topic, new_storage_folder)
 
     def edit_document(self, document_id: int, new_file_name: str):
         document = next((d for d in self.documents if d.id == document_id), None)
         if document:
-            document.file_name = new_file_name
+            document.edit(new_file_name)
 
     def delete_category(self, category_id):
         category = next((c for c in self.categories if c.id == category_id), None)
