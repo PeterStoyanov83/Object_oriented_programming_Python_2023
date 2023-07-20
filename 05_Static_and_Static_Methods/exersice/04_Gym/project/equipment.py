@@ -1,7 +1,7 @@
 class Equipment:
     id = 1
 
-    def __init__(self, name: str) -> None:
+    def __init__(self, name: str):
         self.name = name
         self.id = Equipment.id
         Equipment.id += 1
