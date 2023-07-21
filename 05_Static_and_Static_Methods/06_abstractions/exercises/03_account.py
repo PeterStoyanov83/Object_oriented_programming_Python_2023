@@ -41,12 +41,15 @@ class Account:
         return reversed(self._transactions)
 
     def __gt__(self, other):
+        # Greater Than - compares two properties balance
         return self.balance > other.balance
 
     def __ge__(self, other):
+        # Greater or Equal
         return self.balance >= other.balance
 
     def __eq__(self, other):
+        # are the two elements equal
         return self.balance == other.balance
 
     def __add__(self, other):
