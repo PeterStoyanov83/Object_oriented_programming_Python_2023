@@ -14,3 +14,12 @@ class take_skip:  # the reason of smaller letters because it is USED AS FUNCTION
         self.iterations += 1
 
         return self.iterations * self.step
+
+
+numbers = take_skip(2, 6)
+for number in numbers:
+    print(number)
+
+numbers = take_skip(10, 5)
+for number in numbers:
+    print(number)
