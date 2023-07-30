@@ -18,7 +18,7 @@ class Worker:
         return f'{self.name} has saved {self.money} money.'
 
 
-from unittest import TestCase
+from unittest import TestCase, main
 
 
 # generate test for the bellow class
@@ -92,3 +92,22 @@ class WorkerTests(TestCase):
 
         # assert
         self.assertEqual(62, worker.energy)
+
+    def test_get_info(self):
+        # arrange
+        worker = Worker("Test", 1000, 60)
+
+        result = worker.get_info()
+
+        # assert
+        expected_result = "Test has saved 0 money."
+        self.assertEqual(expected_result, result)
+
+        worker.work()
+        result = worker.get_info()
+        expected_result = "Test has saved 1000 money."
+        self.assertEqual(expected_result, result)
+
+
+if __name__ == "__main__":
+    main()
