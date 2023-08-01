@@ -1,6 +1,9 @@
+from typing import Tuple
 from player import Player
 from project.supply.food import Food
 from project.supply.drink import Drink
+
+
 
 
 class Controller:
@@ -8,7 +11,7 @@ class Controller:
         self.players = []
         self.supplies = []
 
-    def add_player(self, *players: Player):
+    def add_player(self, *players: Tuple[Player]) -> str:
         added_names = []
         for player in players:
             if player.name in added_names:
