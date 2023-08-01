@@ -2,6 +2,7 @@ from player import Player
 from project.supply.food import Food
 from project.supply.drink import Drink
 
+
 class Controller:
     def __init__(self):
         self.players = []
@@ -49,7 +50,8 @@ class Controller:
             return
 
         if player1.stamina == 0 and player2.stamina == 0:
-            return f"Player {first_player_name} does not have enough stamina.\nPlayer {second_player_name} does not have enough stamina."
+            return f"Player {first_player_name} does not have enough stamina." \
+                   f"\nPlayer {second_player_name} does not have enough stamina."
 
         if player1.stamina == 0:
             return f"Player {first_player_name} does not have enough stamina."
