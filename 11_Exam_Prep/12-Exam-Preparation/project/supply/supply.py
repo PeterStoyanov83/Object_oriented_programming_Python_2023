@@ -2,21 +2,21 @@ from abc import ABC, abstractmethod
 
 
 class Supply(ABC):
-    def __init__(self, name: str, energy: int):
-        # validate the ma,e and the energy
 
+    def __init__(self, name: str, energy: int):
         self.name = name
         self.energy = energy
 
     @property
     def name(self):
-        return self.__name__
+        return self.__name
 
     @name.setter
     def name(self, value):
-        if value == "":
+        if value == '':
             raise ValueError("Name cannot be an empty string.")
-        self.name = value
+
+        self.__name = value
 
     @property
     def energy(self):
@@ -25,10 +25,10 @@ class Supply(ABC):
     @energy.setter
     def energy(self, value):
         if value < 0:
-            return ValueError("Energy cannot be less than zero.")
+            raise ValueError("Energy cannot be less than zero.")
+
         self.__energy = value
 
-
     @abstractmethod
-    def details(self):
+    def details(self) -> str:
         ...
