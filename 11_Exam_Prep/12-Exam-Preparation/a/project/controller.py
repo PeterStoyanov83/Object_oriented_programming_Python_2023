@@ -1,6 +1,6 @@
 from typing import Tuple, List
-from project.player import Player
-from project.supply.supply import Supply
+from a.project.player import Player
+from a.project.supply.supply import Supply
 
 
 class Controller:

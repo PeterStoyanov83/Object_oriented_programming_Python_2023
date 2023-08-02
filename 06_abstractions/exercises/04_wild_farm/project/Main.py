@@ -1,6 +1,6 @@
-from project.food import Meat, Vegetable, Seed, Fruit
-from project.animals.birds import Owl, Hen
-from project.animals.mammals import Mouse, Dog, Cat, Tiger
+from a.project import Meat, Vegetable, Seed, Fruit
+from a.project import Owl, Hen
+from a.project import Mouse, Dog, Cat, Tiger
 
 # Creating some instances of animals
 owl = Owl("Ollie", 1.2, 1.5)

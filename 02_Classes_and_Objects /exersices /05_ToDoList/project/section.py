@@ -1,5 +1,5 @@
 from typing import List
-from project.task import Task
+from a.project import Task
 
 
 class Section:

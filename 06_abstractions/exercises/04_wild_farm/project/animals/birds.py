@@ -1,5 +1,5 @@
-from project.animals.animal import Bird
-from project.food import Meat
+from a.project import Bird
+from a.project import Meat
 
 
 class Owl(Bird):

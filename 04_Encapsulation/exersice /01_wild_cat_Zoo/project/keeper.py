@@ -1,4 +1,4 @@
-from project.worker import Worker
+from a.project import Worker
 
 
 class Keeper(Worker):

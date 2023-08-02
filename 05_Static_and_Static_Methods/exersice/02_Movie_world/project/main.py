@@ -1,6 +1,6 @@
-from project.customer import Customer
-from project.dvd import DVD
-from project.movie_world import MovieWorld
+from a.project import Customer
+from a.project import DVD
+from a.project import MovieWorld
 
 import unittest
 

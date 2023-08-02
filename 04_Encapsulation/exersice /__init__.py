@@ -1,6 +1,6 @@
-from project.product import Product
-from project.food.soup import Soup
-from project.beverage.beverage import Beverage
+from a.project import Product
+from a.project import Soup
+from a.project import Beverage
 product = Product("coffee", 2.5)
 print(product.__class__.__name__)
 print(product.name)

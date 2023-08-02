@@ -1,4 +1,4 @@
-from project.elf import Elf
+from a.project import Elf
 
 
 class MuseElf(Elf):

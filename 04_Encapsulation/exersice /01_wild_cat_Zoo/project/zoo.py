@@ -1,9 +1,9 @@
 from typing import List
-from project.worker import Worker
-from project.animal import Animal
-from project.lion import Lion
-from project.tiger import Tiger
-from project.cheetah import Cheetah
+from a.project import Worker
+from a.project import Animal
+from a.project import Lion
+from a.project import Tiger
+from a.project import Cheetah
 
 
 class Zoo:

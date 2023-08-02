@@ -1,4 +1,4 @@
-from project.hero import Hero
+from a.project import Hero
 
 
 class Wizard(Hero):

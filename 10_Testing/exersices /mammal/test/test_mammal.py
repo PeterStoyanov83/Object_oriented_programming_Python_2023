@@ -1,5 +1,5 @@
 from unittest import TestCase, main
-from project.mammal import Mammal
+from a.project import Mammal
 
 
 class TestMammal(TestCase):

@@ -1,4 +1,4 @@
-from project.mammal import Mammal
+from a.project import Mammal
 
 
 class Bear(Mammal):

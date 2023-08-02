@@ -1,4 +1,4 @@
-from project.supply.supply import Supply
+from a.project.supply.supply import Supply
 
 
 class Food(Supply):

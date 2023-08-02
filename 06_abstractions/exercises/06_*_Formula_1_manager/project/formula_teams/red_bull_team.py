@@ -1,5 +1,5 @@
 from typing import Dict
-from project.formula_teams.formula_team import FormulaTeam
+from a.project import FormulaTeam
 
 
 class RedBullTeam(FormulaTeam):

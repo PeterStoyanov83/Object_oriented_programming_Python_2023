@@ -1,5 +1,5 @@
 from typing import List
-from project.room import Room
+from a.project import Room
 
 class Hotel:
     def __init__(self, name: str):

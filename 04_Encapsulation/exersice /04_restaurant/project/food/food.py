@@ -1,4 +1,4 @@
-from project.product import Product
+from a.project import Product
 
 
 class Food(Product):

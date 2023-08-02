@@ -1,8 +1,3 @@
-from project.category import Category
-from project.document import Document
-from project.storage import Storage
-from project.topic import Topic
-
 import unittest
 
 
@@ -134,10 +129,10 @@ if __name__ == "__main__":
     unittest.main()
 
 
-from project.category import Category
-from project.document import Document
-from project.storage import Storage
-from project.topic import Topic
+from a.project import Category
+from a.project import Document
+from a.project import Storage
+from a.project import Topic
 c1 = Category(1, "work")
 t1 = Topic(1, "daily tasks", "C:\\work_documents")
 d1 = Document(1, 1, 1, "finilize project")
