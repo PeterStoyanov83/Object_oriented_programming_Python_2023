@@ -1,9 +1,9 @@
-# from project.customer import Customer
-# from project.equipment import Equipment
-# from project.exercise_plan import ExercisePlan
-# from project.gym import Gym
-# from project.subscription import Subscription
-# from project.trainer import Trainer
+# from project1.customer import Customer
+# from project1.equipment import Equipment
+# from project1.exercise_plan import ExercisePlan
+# from project1.gym import Gym
+# from project1.subscription import Subscription
+# from project1.trainer import Trainer
 #
 # import unittest
 #
