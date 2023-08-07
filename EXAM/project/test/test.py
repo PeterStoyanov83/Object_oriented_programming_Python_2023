@@ -37,7 +37,7 @@ class TestSecondHandCar(unittest.TestCase):
     def test_need_repair(self):
         self.assertEqual(self.car.need_repair(3000.0, 'Engine Repair'), 'Repair is impossible!')
         self.assertEqual(self.car.need_repair(1000.0, 'Engine Repair'), 'Price has been increased due to repair charges.')
-        self.assertEqual(self.car.price, 6000.0)  # Price should increase by repair price
+        self.assertEqual(self.car.price, 6000.0)
         self.assertEqual(len(self.car.repairs), 1)
 
     def test_gt(self):
